@@ -16,7 +16,7 @@ var properties = new BasicProperties
 for (int i = 1; i <= 50; i++)
 {
     string message = $"Task {i}";
-    await Producer.ProducerPayloadAsync(channel, queueName, message, properties);
+    await Producer.ProducerPayloadAsync(channel, string.Empty, queueName, message, properties);
     // Use BasicPublishAsync() Seconde Overload - Give one properties for {Persistent = true}
     // {Persistent = true} => RR - Messages are not lost if RabbitMQ is restarted.
 

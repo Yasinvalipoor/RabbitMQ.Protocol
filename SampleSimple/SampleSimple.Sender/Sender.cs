@@ -10,7 +10,7 @@ await Producer.CreateQueueFromChannel(channel, queueName);
 
 const string message = "Hello From IRAN";
 
-await Producer.ProducerPayloadAsync(channel, queueName, message);
+await Producer.ProducerPayloadAsync(channel, string.Empty, queueName, message);
 // Use BasicPublishAsync() First Overload - Default
 
 
