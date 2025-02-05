@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.PublishSubscribe", "03.P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublishSubscribe.EmitLog", "PublishSubscribe\PublishSubscribe.EmitLog\PublishSubscribe.EmitLog.csproj", "{37BDF3BF-C6BF-4B48-8AE0-1EFB390A3F12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublishSubscribe.ReceiveLogs", "PublishSubscribe\PublishSubscribe.ReceiveLogs\PublishSubscribe.ReceiveLogs.csproj", "{C6A31EA7-4977-4AB9-A0A2-F64472B18F5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublishSubscribe.ReceiveLogs", "PublishSubscribe\PublishSubscribe.ReceiveLogs\PublishSubscribe.ReceiveLogs.csproj", "{C6A31EA7-4977-4AB9-A0A2-F64472B18F5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkQueues.Worker", "WorkQueues\WorkQueues.Worker\WorkQueues.Worker.csproj", "{697CC06F-14E4-4916-A416-AE72A7CE0873}"
 EndProject
