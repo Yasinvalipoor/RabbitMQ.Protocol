@@ -5,10 +5,16 @@ namespace RabbitMQ.Protocol.Common;
 
 public class Producer : CommonOperations
 {
-    public static async Task ProducerPayloadAsync(IChannel channel, string routingKey, string messageBody)
+    public static async Task ProducerPayloadAsync(IChannel channel, string exchangeName, string routingKey, string messageBody)
     {
         var payload = ConvertObjectOrMessageToByte(messageBody);
-        await channel.BasicPublishAsync(exchange: string.Empty, routingKey: routingKey, body: payload);
+        await channel.BasicPublishAsync(exchange: exchangeName, routingKey: routingKey, body: payload);
+    }
+
+    public static async Task ProducerPayloadAsync(IChannel channel, string exchangeName, string routingKey, string messageBody, BasicProperties properties)
+    {
+        var payload = ConvertObjectOrMessageToByte(messageBody);
+        await channel.BasicPublishAsync(exchange: exchangeName, routingKey: routingKey, mandatory: true, basicProperties: properties, body: payload);
     }
 
     public static async Task ProducerPayloadAsync(IChannel channel, string routingKey, string messageBody, BasicProperties properties)
