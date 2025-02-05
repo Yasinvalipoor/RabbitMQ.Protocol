@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\RabbitMQ.Protocol.Common\RabbitMQ.Protocol.Common.csproj" />
+  </ItemGroup>
+
 </Project>
