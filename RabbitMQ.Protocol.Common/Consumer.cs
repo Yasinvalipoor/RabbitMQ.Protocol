@@ -14,7 +14,8 @@ public class Consumer : CommonOperations
         {
             var body = ea.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
-            Console.WriteLine($" [x] Received {message}");
+            var routingKey = ea.RoutingKey;
+            Console.WriteLine($" [x] Received '{routingKey}':'{message}'");
             await Task.CompletedTask;
         };
         await channel.BasicConsumeAsync(queue, autoAck: true, consumer: consumer);
